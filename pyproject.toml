@@ -1,0 +1,17 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "livereload-server"
+version = "0.1.0"
+description = "A static file server that supports the LiveReload protocol"
+authors = [{ name = "Pradyun Gedam", email = "mail@pradyunsg.me" }]
+dependencies = ["aiohttp", "watchfiles"]
+requires-python = ">= 3.8"
+
+[project.urls]
+GitHub = "https://github.com/pradyunsg/livereload-server"
+
+[project.scripts]
+livereload-server = "livereload_server.__main__:main"
